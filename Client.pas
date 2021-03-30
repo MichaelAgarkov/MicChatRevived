@@ -37,19 +37,20 @@ begin
   System.Console.Title := 'MicChat Revived Edition Client';
   s_raw := TByteArray(System.Array.CreateInstance(typeof(byte), 1024));
   textcolor(2);
-  write('MicChat Revived Edition');
+  write('MicChat Revived Edition [Client]');
   writeln;
   write('Version 1.1');
-  writeln;
-  write('Client');
   repeat
     begin
       try
-        textcolor(2);
+        textcolor(3);
         writeln;
         write('Enter IP: ');
+        textcolor(7);
         readln(s_ip);
+        textcolor(3);
         write('Enter port: ');
+        textcolor(7);
         readln(s_port);
       except
         textcolor(4);
@@ -62,7 +63,11 @@ begin
         client.Connect(ipAddress.Parse(s_ip), s_port);
         if client.Connected = true then
         begin
-          write('Enter name: '); readln(name);
+          textcolor(3);
+          write('Enter name: ');
+          textcolor(7);
+          readln(name);
+          textcolor(2);
           s_str := client.GetStream;
           s_str.Write(System.Text.Encoding.Default.GetBytes(name), 0, name.Length);
           writeln('Connected to ', s_ip);

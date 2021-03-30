@@ -6,6 +6,7 @@ procedure InitializeComponent;
         self.tabControl1 := new System.Windows.Forms.TabControl();
         self.tabPage1 := new System.Windows.Forms.TabPage();
         self.richTextBox1 := new System.Windows.Forms.RichTextBox();
+        self.maksim_link := new System.Windows.Forms.LinkLabel();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.tabControl1.SuspendLayout();
         self.tabPage1.SuspendLayout();
@@ -34,7 +35,7 @@ procedure InitializeComponent;
         self.linkLabel1.Size := new System.Drawing.Size(190, 67);
         self.linkLabel1.TabIndex := 1;
         self.linkLabel1.TabStop := true;
-        self.linkLabel1.Text := 'MicChat Revived Edition'#13#10'Version 1.1'#13#10#13#10'By Michael Agarkov';
+        self.linkLabel1.Text := 'MicChat Revived Edition'#13#10'Version 1.1'#13#10#13#10'By Michael Agarkov'#13#10;
         self.linkLabel1.UseCompatibleTextRendering := true;
         self.linkLabel1.LinkClicked += linkLabel1_LinkClicked;
         // 
@@ -68,14 +69,32 @@ procedure InitializeComponent;
         self.richTextBox1.TabIndex := 0;
         self.richTextBox1.Text := resources.GetString('richTextBox1.Text');
         // 
+        // maksim_link
+        // 
+        self.maksim_link.BackColor := System.Drawing.Color.Transparent;
+        self.maksim_link.Font := new System.Drawing.Font('Segoe UI', 9, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
+        self.maksim_link.ForeColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(135)))), (System.Int32((System.Byte(255)))));
+        self.maksim_link.LinkArea := new System.Windows.Forms.LinkArea(4, 20);
+        self.maksim_link.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
+        self.maksim_link.Location := new System.Drawing.Point(82, 72);
+        self.maksim_link.Name := 'maksim_link';
+        self.maksim_link.Size := new System.Drawing.Size(150, 18);
+        self.maksim_link.TabIndex := 4;
+        self.maksim_link.TabStop := true;
+        self.maksim_link.Text := 'and Maksim Chrenyshkov';
+        self.maksim_link.UseCompatibleTextRendering := true;
+        self.maksim_link.LinkClicked += openLink;
+        // 
         // AboutMicChatRevivedEdition
         // 
         self.BackgroundImage := (System.Drawing.Image(resources.GetObject('$this.BackgroundImage')));
         self.BackgroundImageLayout := System.Windows.Forms.ImageLayout.Stretch;
-        self.ClientSize := new System.Drawing.Size(284, 236);
-        self.Controls.Add(self.tabControl1);
+        self.ClientSize := new System.Drawing.Size(284, 235);
+        self.Controls.Add(self.maksim_link);
         self.Controls.Add(self.linkLabel1);
+        self.Controls.Add(self.tabControl1);
         self.Controls.Add(self.pictureBox1);
+        self.DoubleBuffered := true;
         self.FormBorderStyle := System.Windows.Forms.FormBorderStyle.FixedSingle;
         self.Icon := (System.Drawing.Icon(resources.GetObject('$this.Icon')));
         self.MaximizeBox := false;

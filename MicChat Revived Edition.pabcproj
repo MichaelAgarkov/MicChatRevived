@@ -11,6 +11,7 @@
     <Item Type="SourceFile" Name="Splash.pas" Path="Splash.pas" />
     <Item Type="SourceFile" Name="UTATAR.pas" Path="UTATAR.pas" />
     <Item Type="SourceFile" Name="SysInfo.pas" Path="SysInfo.pas" />
+    <Item Type="SourceFile" Name="Client.pas" Path="Client.pas" />
     <Item Type="Reference" AssemblyName="System" FullAssemblyName="System.dll" />
     <Item Type="Reference" AssemblyName="System.Windows.Forms" FullAssemblyName="System.Windows.Forms.dll" />
     <Item Type="Reference" AssemblyName="System.Drawing" FullAssemblyName="System.Drawing.dll" />

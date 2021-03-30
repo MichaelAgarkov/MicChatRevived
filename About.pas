@@ -7,6 +7,7 @@ uses System, System.Drawing, System.Windows.Forms;
 type
   AboutMicChatRevivedEdition = class(Form)
     procedure linkLabel1_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+    procedure openLink(sender: Object; e: LinkLabelLinkClickedEventArgs);
   {$region FormDesigner}
   private
     {$resource About.AboutMicChatRevivedEdition.resources}
@@ -14,6 +15,7 @@ type
     tabControl1: TabControl;
     tabPage1: TabPage;
     richTextBox1: RichTextBox;
+    maksim_link: LinkLabel;
     pictureBox1: PictureBox;
     {$include About.AboutMicChatRevivedEdition.inc}
   {$endregion FormDesigner}
@@ -29,6 +31,11 @@ implementation
 procedure AboutMicChatRevivedEdition.linkLabel1_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
 begin
   exec('https://www.youtube.com/channel/UCxFymvUt5FeMevOUEOfmcLA');
+end;
+
+procedure AboutMicChatRevivedEdition.openLink(sender: Object; e: LinkLabelLinkClickedEventArgs);
+begin
+  exec('https://www.vk.com/maksim.mshp');
 end;
 
 end.

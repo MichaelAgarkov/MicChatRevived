@@ -27,7 +27,9 @@ begin
   s_str[i] := client[i].GetStream;
   length := s_str[i].Read(s_raw, 0, s_raw.Length);
   name := System.Text.Encoding.Default.GetString(s_raw, 0, length);
+  textcolor(3);
   writeln('Has client ', name, '.');
+  textcolor(2);
   msg := Concat('Welcome to the server ', s_ip, ', ', name, '!');
   s_str[i].Write(System.Text.Encoding.Default.GetBytes(msg), 0, msg.Length);
   repeat
