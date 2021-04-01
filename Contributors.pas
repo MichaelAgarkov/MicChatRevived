@@ -15,6 +15,11 @@ type
     procedure linkLabel4_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
     procedure button1_Click(sender: Object; e: EventArgs);
     procedure linkLabel5_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+    procedure linkLabel7_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+    procedure linkLabel8_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+    procedure linkLabel9_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+    procedure linkLabel10_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+    procedure linkLabel11_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
   {$region FormDesigner}
   private
     {$resource Contributors.ContribForm.resources}
@@ -34,6 +39,11 @@ type
     pictureBox1: PictureBox;
     pictureBox2: PictureBox;
     linkLabel5: LinkLabel;
+    linkLabel7: LinkLabel;
+    linkLabel8: LinkLabel;
+    linkLabel9: LinkLabel;
+    linkLabel10: LinkLabel;
+    linkLabel11: LinkLabel;
     panel1: Panel;
     {$include Contributors.ContribForm.inc}
   {$endregion FormDesigner}
@@ -104,6 +114,31 @@ end;
 procedure ContribForm.linkLabel5_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
 begin
   exec('mailto:michaelagarkov@outlook.com');
+end;
+
+procedure ContribForm.linkLabel7_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+begin
+  exec('https://maksim.cherny.sh/');
+end;
+
+procedure ContribForm.linkLabel8_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+begin
+  exec('https://www.instagram.com/maksim.mshp/');
+end;
+
+procedure ContribForm.linkLabel9_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+begin
+  exec('https://twitter.com/maksim_mshp');
+end;
+
+procedure ContribForm.linkLabel10_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+begin
+  exec('mailto:maksim@cherny.sh');
+end;
+
+procedure ContribForm.linkLabel11_LinkClicked(sender: Object; e: LinkLabelLinkClickedEventArgs);
+begin
+  exec('https://www.reddit.com/u/MichaelAgarkov');
 end;
 
 end.

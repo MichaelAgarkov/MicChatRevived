@@ -27,14 +27,14 @@ procedure InitializeComponent;
         self.linkLabel1.BackColor := System.Drawing.Color.Transparent;
         self.linkLabel1.Font := new System.Drawing.Font('Segoe UI', 9, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
         self.linkLabel1.ForeColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(135)))), (System.Int32((System.Byte(255)))));
-        self.linkLabel1.LinkArea := new System.Windows.Forms.LinkArea(40, 12);
+        self.linkLabel1.LinkArea := new System.Windows.Forms.LinkArea(48, 12);
         self.linkLabel1.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
         self.linkLabel1.Location := new System.Drawing.Point(82, 9);
         self.linkLabel1.Name := 'linkLabel1';
         self.linkLabel1.Size := new System.Drawing.Size(190, 67);
         self.linkLabel1.TabIndex := 1;
         self.linkLabel1.TabStop := true;
-        self.linkLabel1.Text := 'MicChat Revived Edition'#13#10'Version 1.2'#13#10#13#10'Contributors';
+        self.linkLabel1.Text := 'MicChat Revived Edition'#13#10'Version 1.3 (Indev)'#13#10#13#10'Contributors';
         self.linkLabel1.UseCompatibleTextRendering := true;
         self.linkLabel1.LinkClicked += linkLabel1_LinkClicked;
         // 

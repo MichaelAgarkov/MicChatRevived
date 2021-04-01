@@ -16,6 +16,8 @@ type
     procedure button4_Click(sender: Object; e: EventArgs);
     procedure button5_Click(sender: Object; e: EventArgs);
     procedure SettingsForm_Load(sender: Object; e: EventArgs);
+    procedure button6_Click(sender: Object; e: EventArgs);
+    procedure button7_Click(sender: Object; e: EventArgs);
   {$region FormDesigner}
   private
     {$resource Settings.SettingsForm.resources}
@@ -37,6 +39,14 @@ type
     checkBox1: CheckBox;
     checkBox2: CheckBox;
     checkBox3: CheckBox;
+    panel5: Panel;
+    label3: &Label;
+    panel6: Panel;
+    label4: &Label;
+    pictureBox4: PictureBox;
+    pictureBox3: PictureBox;
+    button6: Button;
+    button7: Button;
     treeView1: TreeView;
     {$include Settings.SettingsForm.inc}
   {$endregion FormDesigner}
@@ -103,17 +113,51 @@ begin
   begin
     panel3.Visible := true;
     panel4.Visible := false;
+    panel5.Visible := false;
+    panel6.Visible := false;
     pictureBox1.Visible := true;
     pictureBox2.Visible := false;
+    pictureBox3.Visible := false;
+    pictureBox4.Visible := false;
     label1.Text := 'General';
     label2.Text := 'The general settings for the program';
   end;
   if(treeView1.SelectedNode = treeView1.Nodes[1]) then
   begin
+    pictureBox3.Visible := true;
+    pictureBox1.Visible := false;
+    pictureBox2.Visible := false;
+    pictureBox4.Visible := false;
+    panel5.Visible := true;
+    panel3.Visible := false;
+    panel4.Visible := false;
+    panel6.Visible := false;
+    label1.Text := 'Client';
+    label2.Text := 'The MicChat client settings';
+  end;
+  if(treeView1.SelectedNode = treeView1.Nodes[2]) then
+  begin
+    pictureBox4.Visible := true;
+    pictureBox1.Visible := false;
+    pictureBox2.Visible := false;
+    pictureBox3.Visible := false;
+    panel6.Visible := true;
+    panel3.Visible := false;
+    panel4.Visible := false;
+    panel5.Visible := false;
+    label1.Text := 'Server';
+    label2.Text := 'The MicChat server settings';
+  end;
+  if(treeView1.SelectedNode = treeView1.Nodes[3]) then
+  begin
     pictureBox2.Visible := true;
     pictureBox1.Visible := false;
+    pictureBox3.Visible := false;
+    pictureBox4.Visible := false;
     panel4.Visible := true;
     panel3.Visible := false;
+    panel5.Visible := false;
+    panel6.Visible := false;
     label1.Text := 'Advanced';
     label2.Text := 'The advanced program settings';
   end;
@@ -159,6 +203,16 @@ begin
   if(setting2 = 'False') then checkBox2.Checked := false;
   if(setting3 = 'True') then checkBox3.Checked := true;
   if(setting3 = 'False') then checkBox3.Checked := false;
+end;
+
+procedure SettingsForm.button6_Click(sender: Object; e: EventArgs);
+begin
+  
+end;
+
+procedure SettingsForm.button7_Click(sender: Object; e: EventArgs);
+begin
+  
 end;
 
 end.
